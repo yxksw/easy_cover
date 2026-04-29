@@ -309,16 +309,7 @@ export default function Controls() {
   };
 
   return (
-    <div className="w-full md:w-80 h-1/2 md:h-full border-t md:border-t-0 md:border-r bg-background flex flex-col shadow-lg z-10">
-      <div className="p-4 border-b">
-        <h1 className="text-xl font-bold flex items-center gap-2">
-           EasyCover - AcoFork
-        </h1>
-        <p className="text-xs text-muted-foreground mt-1">
-            简单、优雅的纯客户端封面图生成器。无需上传，保护隐私。
-        </p>
-      </div>
-      
+    <div className="w-full md:w-80 flex-1 md:h-full border-t md:border-t-0 md:border-r bg-background flex flex-col shadow-lg z-10 min-h-0">
       <div className="flex-1 min-h-0 w-full">
         <ScrollArea className="h-full">
             <div className="p-4 space-y-6">

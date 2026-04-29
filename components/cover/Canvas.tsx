@@ -35,7 +35,8 @@ export default function Canvas() {
       const parent = containerRef.current.parentElement;
       if (!parent) return;
 
-      const padding = 80;
+      const isMobile = parent.clientWidth < 768;
+      const padding = isMobile ? 16 : 80;
       const availableWidth = parent.clientWidth - padding;
       const availableHeight = parent.clientHeight - padding;
 
@@ -205,7 +206,7 @@ export default function Canvas() {
   );
 
   return (
-    <div className="flex-1 bg-gray-100 dark:bg-gray-900 overflow-hidden relative w-full h-[40vh] md:h-full min-w-0 flex-shrink-0 md:flex-shrink">
+    <div className="bg-gray-100 dark:bg-gray-900 overflow-hidden relative w-full h-[25vh] md:h-full md:flex-1 min-w-0 shrink-0 md:shrink">
       {/* Container for scaling */}
       <div
         ref={containerRef}
